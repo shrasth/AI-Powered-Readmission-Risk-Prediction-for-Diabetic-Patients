@@ -1,5 +1,4 @@
 # AI-Powered Readmission Risk Prediction for Diabetic Patients  
-*(with Snowflake, Machine Learning, Explainable AI & Generative AI)*
 
 ## Project Summary
 
