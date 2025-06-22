@@ -1,7 +1,7 @@
 # AI-Powered Readmission Risk Prediction for Diabetic Patients  
 *(with Snowflake, Machine Learning, Explainable AI & Generative AI)*
 
-## 🩺 Project Summary
+## Project Summary
 
 This project builds a complete AI-powered pipeline to predict 30-day hospital readmission risk for diabetic patients. The solution integrates modern data science tools, cloud data engineering, explainable AI, and generative AI automation to simulate a real-world healthcare analytics application.
 
