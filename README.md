@@ -1,80 +1,115 @@
-# AI-Powered Readmission Risk Prediction for Diabetic Patients  
+# AI-Powered Hospital Readmission Risk Prediction
 
-## Project Summary
+## Project Overview
 
-This project builds a complete AI-powered pipeline to predict 30-day hospital readmission risk for diabetic patients. The solution integrates modern data science tools, cloud data engineering, explainable AI, and generative AI automation to simulate a real-world healthcare analytics application.
+Hospital readmissions contribute significantly to healthcare costs and patient burden, especially among chronic diseases like diabetes. This project develops an end-to-end AI-powered solution to predict 30-day readmission risk for diabetic patients using real-world healthcare data. The solution integrates cloud data warehousing, machine learning, explainability, generative AI reporting, and automation — simulating a full-stack data science application relevant for real-world healthcare operations.
 
----
-
-## Key Features
-
-- **Snowflake** for cloud-based data storage, ingestion, and transformation.
-- **Python** for data analysis, machine learning, and pipeline automation.
-- **Machine Learning** models: Random Forest, XGBoost, Logistic Regression.
-- **Explainable AI (XAI)** using SHAP to interpret model decisions.
-- **Generative AI (LLM)** integration via OpenAI's GPT-4o to generate patient risk reports.
-- **Automation** using Prefect for end-to-end orchestration.
-- **Deployment** with an interactive Streamlit app.
+This project is designed as a production-grade portfolio case study, demonstrating capabilities across **data engineering, machine learning, AI integration, and cloud automation**.
 
 ---
 
-## Dataset
+## Business Problem
 
-- **Source:** UCI Machine Learning Repository  
-- **Dataset:** [Diabetes 130-US hospitals for years 1999–2008](https://archive.ics.uci.edu/ml/datasets/diabetes+130-us+hospitals+for+years+1999-2008)  
-- Contains ~100K patient records with demographics, diagnoses, and readmission labels.
+> Can we proactively identify diabetic patients at risk of being readmitted within 30 days of discharge? Early identification of high-risk patients allows healthcare providers to allocate resources, intervene earlier, and potentially improve patient outcomes.
 
 ---
 
-## Project Workflow
+## Solution Highlights
 
-1. **Data Ingestion**  
-   - Load raw dataset into Snowflake cloud data warehouse.
-
-2. **Data Transformation**  
-   - Clean and prepare data using Snowflake SQL and Python.
-
-3. **Machine Learning**  
-   - Train models to predict readmission risk.
-   - Evaluate model performance using ROC-AUC, F1, and precision-recall metrics.
-
-4. **Explainability**  
-   - Use SHAP to analyze feature importance for transparency in healthcare predictions.
-
-5. **Generative AI Reports**  
-   - Generate natural language patient summaries using OpenAI GPT models.
-
-6. **Automation Pipeline**  
-   - Build end-to-end orchestration with Prefect.
-
-7. **Deployment**  
-   - Deploy an interactive web app using Streamlit for real-time risk prediction and explanation.
+- **Cloud Data Engineering**: Data ingestion, cleansing, and transformation using Snowflake.
+- **Machine Learning**: Predictive models trained using Random Forest, XGBoost, and Logistic Regression.
+- **Explainable AI**: SHAP-based feature attribution to generate clinically interpretable explanations.
+- **Generative AI**: GPT-powered narrative summaries translating predictions into natural language risk assessments for clinicians.
+- **Automation Pipelines**: Full end-to-end data orchestration with Prefect.
+- **Deployment**: Interactive web application using Streamlit for real-time prediction, explainability, and report generation.
 
 ---
 
-## Tools & Technologies Used
+## Dataset Description
 
-| Category | Tools |
-| -------- | ----- |
-| Data Storage | Snowflake |
-| Programming | Python 3.10+ |
-| ML Libraries | scikit-learn, XGBoost |
-| XAI | SHAP |
-| LLM Integration | OpenAI GPT-4o, LangChain |
-| Automation | Prefect |
-| Deployment | Streamlit |
-| Version Control | Git + GitHub |
+- **Source**: UCI Machine Learning Repository
+- **Dataset**: [Diabetes 130-US hospitals for years 1999–2008](https://archive.ics.uci.edu/ml/datasets/diabetes+130-us+hospitals+for+years+1999-2008)
+- **Records**: ~100,000 patient admissions
+- **Fields**: Demographics, diagnoses, lab results, medications, and readmission outcomes
+
+> *Note: This is a public dataset; no protected health information (PHI) is involved.*
+
+---
+
+## Technology Stack
+
+| Layer | Tools |
+| ----- | ----- |
+| Data Warehouse | **Snowflake** |
+| Data Science | **Python, pandas, scikit-learn, XGBoost** |
+| Explainability | **SHAP (SHapley values)** |
+| AI/LLM Integration | **OpenAI GPT-4o, LangChain** |
+| Automation & Orchestration | **Prefect** |
+| Deployment | **Streamlit** |
+| Version Control | **GitHub** |
+
+---
+
+## Machine Learning Approach
+
+- **Preprocessing**: Missing value handling, feature encoding, outlier removal
+- **Feature Engineering**: Derived features using Snowflake SQL & Python
+- **Models Evaluated**:
+  - Random Forest Classifier
+  - XGBoost Classifier
+  - Logistic Regression (baseline)
+- **Evaluation Metrics**:
+  - ROC-AUC
+  - F1-Score
+  - Precision-Recall Curve
+
+---
+
+## Explainable AI
+
+> In healthcare, model transparency is critical. SHAP (SHapley Additive Explanations) is used to quantify each feature’s contribution to an individual patient’s readmission risk, enhancing model trust and clinical interpretability.
+
+---
+
+## Generative AI Integration
+
+- **Objective**: Translate model predictions into doctor-friendly risk assessment summaries.
+- **Tool**: OpenAI GPT-4o API with LangChain orchestration
+- **Example Output**:
+
+> "Based on the patient's medical history, recent lab results, and medication adjustments, the predicted likelihood of readmission within 30 days is 72%. Key contributing factors include prior emergency visits, insulin regimen changes, and elevated A1C levels."
+
+---
+
+## Automation Pipeline
+
+| Stage | Automated Process |
+| ----- | ------------------ |
+| Data Ingestion | Snowflake Tasks |
+| Feature Engineering | Snowflake SQL Views |
+| Model Training | Python ML Pipeline |
+| Explainability | SHAP Visualizations |
+| Report Generation | GPT-powered narrative |
+| Orchestration | Prefect Workflows |
+| Deployment | Streamlit Web App |
+
+---
+
+## Deployment Demo
+
+> 🚀 *A fully functional Streamlit application is deployed [here](#) to demonstrate real-time predictions, explainability, and AI-generated reports.*
 
 ---
 
 ## Repository Structure
 
 ```bash
-├── data/                # Raw & processed datasets
-├── notebooks/           # Jupyter notebooks for EDA and model development
-├── src/                 # Source code for ML pipelines
-├── automation/          # Prefect flow scripts
-├── deployment/          # Streamlit app code
-├── docs/                # Diagrams and documentation
-├── requirements.txt     # Python package dependencies
-├── README.md            # Project readme (this file)
+   diabetes-readmission-prediction
+ ┣ 📂 data/                # Raw and processed data
+ ┣ 📂 notebooks/           # Exploratory data analysis and model notebooks
+ ┣ 📂 src/                 # Source code for ML pipelines
+ ┣ 📂 automation/          # Prefect flows and orchestration scripts
+ ┣ 📂 deployment/          # Streamlit app code
+ ┣ 📂 docs/                # Documentation and architecture diagrams
+ ┣ 📄 requirements.txt     # Python dependencies
+ ┣ 📄 README.md            # Project overview (this file)
