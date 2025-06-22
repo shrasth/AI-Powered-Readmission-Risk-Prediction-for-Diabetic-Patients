@@ -9,13 +9,13 @@ This project builds a complete AI-powered pipeline to predict 30-day hospital re
 
 ## Key Features
 
-- ✅ **Snowflake** for cloud-based data storage, ingestion, and transformation.
-- ✅ **Python** for data analysis, machine learning, and pipeline automation.
-- ✅ **Machine Learning** models: Random Forest, XGBoost, Logistic Regression.
-- ✅ **Explainable AI (XAI)** using SHAP to interpret model decisions.
-- ✅ **Generative AI (LLM)** integration via OpenAI's GPT-4o to generate patient risk reports.
-- ✅ **Automation** using Prefect for end-to-end orchestration.
-- ✅ **Deployment** with an interactive Streamlit app.
+- **Snowflake** for cloud-based data storage, ingestion, and transformation.
+- **Python** for data analysis, machine learning, and pipeline automation.
+- **Machine Learning** models: Random Forest, XGBoost, Logistic Regression.
+- **Explainable AI (XAI)** using SHAP to interpret model decisions.
+- **Generative AI (LLM)** integration via OpenAI's GPT-4o to generate patient risk reports.
+- **Automation** using Prefect for end-to-end orchestration.
+- **Deployment** with an interactive Streamlit app.
 
 ---
 
